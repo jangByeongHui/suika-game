@@ -31,7 +31,7 @@ export var getFruitFeature = function (fruit) {
         case Fruit.APPLE:
             return { radius: getRenderWidth() / 6, mass: 1, label: Fruit.APPLE, score: 28 };
         case Fruit.PEACH:
-            return { radius: getRenderWidth() / 5, mass: 1, label: Fruit.PEACH, score: 36 };
+            return { radius: getRenderWidth() / 5.3, mass: 1, label: Fruit.PEACH, score: 36 };
         case Fruit.COCONUT:
             return { radius: getRenderWidth() / 4.6, mass: 1, label: Fruit.COCONUT, score: 45 };
         case Fruit.MELON:
@@ -43,9 +43,9 @@ export var getFruitFeature = function (fruit) {
     }
 };
 export var getRandomFruitFeature = function () {
-    var fruits = Object.values(Fruit).slice(0, 5);
+    var fruits = Object.values(Fruit).slice(0, 11);
     var randomIndex = Math.floor(Math.random() * fruits.length); // 무작위 인덱스 선택
-    return getFruitFeature(fruits[randomIndex]);
+    return getFruitFeature(fruits[0]);
 };
 export var getNextFruitFeature = function (currentFruit) {
     // 현재 과일의 순서를 찾기
